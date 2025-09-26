@@ -1,4 +1,6 @@
 def calculadora():
+    
+    
     """
     Calculadora simples com as 4 operações básicas.
     """
@@ -25,22 +27,22 @@ def calculadora():
             
             if opcao == '1':
                 resultado = num1 + num2
-                print(f"📊 Resultado: {num1} + {num2} = {resultado}")
+                print(f" Resultado: {num1} + {num2} = {resultado}")
             elif opcao == '2':
                 resultado = num1 - num2
-                print(f"📊 Resultado: {num1} - {num2} = {resultado}")
+                print(f" Resultado: {num1} - {num2} = {resultado}")
             elif opcao == '3':
                 resultado = num1 * num2
-                print(f"📊 Resultado: {num1} * {num2} = {resultado}")
+                print(f" Resultado: {num1} * {num2} = {resultado}")
             elif opcao == '4':
                 if num2 == 0:
-                    print("❌ Erro: Divisão por zero não é permitida!")
+                    print(" Erro: Divisão por zero não é permitida!")
                 else:
                     resultado = num1 / num2
-                    print(f"📊 Resultado: {num1} / {num2} = {resultado}")
+                    print(f" Resultado: {num1} / {num2} = {resultado}")
                     
         except ValueError:
-            print("❌ Erro: Digite apenas números válidos (ex.: 5, 3.14)!")
+            print(" Erro: Digite apenas números válidos (ex.: 5, 3.14)!")
         
         # Pausa para o usuário ver o resultado
         input("\nPressione Enter para continuar...")
