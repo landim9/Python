@@ -1,6 +1,4 @@
 def calculadora():
-    
-    
     """
     Calculadora simples com as 4 operações básicas.
     """
