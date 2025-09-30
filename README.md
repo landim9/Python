@@ -7,7 +7,7 @@
 
 [Git](https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.2/Git-2.51.0.2-64-bit.exe)
 
-[Vscode](https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe)
+[Vscode](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)
 
 ---
 
