@@ -5,6 +5,10 @@
 ## PYTHON 3.10.7 Versão SENAI HOMOLOGADA
 [Python](https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe)
 
+[Git](https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.2/Git-2.51.0.2-64-bit.exe)
+
+[Vscode](https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe)
+
 ---
 
 
