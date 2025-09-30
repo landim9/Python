@@ -2,6 +2,10 @@
   <img src="https://www.python.org/static/community_logos/python-logo.png" width="150">
 </p>
 
+## PYTHON 3.10.7 Versão SENAI HOMOLOGADA
+[Python](https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe)
+
+---
 
 
 Python é uma linguagem de programação de alto nível, interpretada, orientada a objetos e de tipagem dinâmica. Criada por Guido van Rossum em 1991, destaca-se pela simplicidade da sintaxe e pela legibilidade do código, o que a torna acessível para iniciantes e, ao mesmo tempo, poderosa para desenvolvedores experientes.
@@ -58,4 +62,9 @@ O repositório está organizado em diferentes tópicos de estudo:
    - Programação orientada a objetos (POO)
    - Bibliotecas externas populares (`requests`, `beautifulsoup4`, `numpy`)
 com/seu-usuario/aprendizado-python.git
+
+
+
+---
+
 
