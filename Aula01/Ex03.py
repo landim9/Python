@@ -15,7 +15,7 @@ def calculadora():
             break
         
         if opcao not in ['1', '2', '3', '4']:
-            print("❌ Opção inválida! Tente novamente.")
+            print("Opção inválida! Tente novamente.")
             input("Pressione Enter para continuar...")
             continue
         
