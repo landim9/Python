@@ -1,3 +1,4 @@
+import locale
 def calculadora():
     try:
         oper = input("Digite o operador (+, -, *, /, %): ")
@@ -67,8 +68,10 @@ def cota():
             
             formula = ((y * x * z * w) * (1 + f) * (1 + (distancia * 9.8)))  
             
+            
+            formatted_formula = locale.format_string('%.2f', formula, grouping=True)
             print("Aeroporto: ", nome_aeroporto)  
-            print(f"Custo estimado de frete: R$ {formula:.2f}")
+            print(f"Custo estimado de frete: R$ {formatted_formula}")
         except ValueError:
             print("Erro: Entrada inválida. Certifique-se de digitar números válidos.")
     
