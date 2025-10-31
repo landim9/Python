@@ -1,8 +1,10 @@
 import mod_inputs
 import calculadora
-
+import config
+import letreiro
 
 def menu():
+    print(letreiro.banner_pagga("MENU PRINCIPAL"))
     print("\nEscolha um programa: ")
     print("Sair => 0 |  Calculadora => 1 | Cota Frete => 2")
 
@@ -24,6 +26,7 @@ def valida_menu(num):
     return programa
 
 def main():
+    config.limpa_tela()
     executa = True
     while executa:
         menu()

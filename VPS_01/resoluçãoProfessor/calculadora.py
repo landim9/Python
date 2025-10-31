@@ -1,5 +1,6 @@
 import mod_inputs
 import finaliza_programa
+import config
 
 def mensagem():
     print("\n############################################")

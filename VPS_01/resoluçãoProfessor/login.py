@@ -1,4 +1,5 @@
 import mod_inputs
+import letreiro
 
 def msg_login():
     print("###################################")
@@ -32,6 +33,7 @@ def main():
         senha = recebe_senha()
         autentica = valida_usuario(usuario, senha)
         return True
+    
 
 if __name__ == "__main__":
     main()

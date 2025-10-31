@@ -1,3 +1,5 @@
+
+
 def finaliza_programa(mensagem):
     valida = True
     while valida:
@@ -15,3 +17,4 @@ def finaliza_programa(mensagem):
         except:
             print("Valor inválido...")
     return retorna
+
