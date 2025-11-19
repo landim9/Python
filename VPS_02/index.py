@@ -1,5 +1,5 @@
-from pickletools import opcodes
 import pandas as pd
+import os
 
 df = pd.read_csv("PYTH_07_01_Inventario.csv", sep=";")
 
@@ -10,7 +10,7 @@ df['SalePriceTotal'] = df['StockQuantity'] * df['SalePrice']
 # Função para exibir o DataFrame original e salvar como CSV
 def mostrar_dataframe():
     print("\nDataFrame Original:\n")
-    print(df.to_string(index=False))
+    print(df.to_string(header=True, index=False))
     df.to_csv('dataframe_original.csv', index=False)
     print("Arquivo 'dataframe_original.csv' salvo com sucesso!")
 
@@ -57,6 +57,7 @@ def mostrar_menu():
 
 # Loop principal (aprimorado com validação de entrada e mensagens mais claras)
 while True:
+    limpar = os.system('cls' if os.name == 'nt' else 'clear')
     mostrar_menu()
     escolha = input("Digite a opção desejada: ").lower().strip()
 

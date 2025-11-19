@@ -83,7 +83,6 @@ def ordenar_por_quantidade():
     ordenado_csv.to_csv('ordenar_por_quantidade.csv', index=False)
     print("Arquivo 'ordenar_por_quantidade.csv' salvo com sucesso!")
 
-# Dicionário de opções (adicionada nova opção 'h' para mostrar DataFrame)
 opcoes = {
     'a': ("Total por Venda", total_por_compra),
     'b': ("Total de Vendas por Item", total_por_venda),
