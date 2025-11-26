@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    color: var(--third);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--main);
+    }
+
+.log{display: flex;
+    padding-right: 0px;
+    gap: 40px;
+}
+
+.log button{
+    height: 40px;
+    width: 90px;
+    border: #000 2px solid;
+    border-radius: 20px;
+}
+
+.log button:hover{
+    cursor: pointer;
+}
+:root{
+    --main: #3498db;
+    --second: #2c3e50;
+    --third: #ecf0f1;
+    --alert: #e74c3c;
+    --sucess: #2ecc71;
+}
+
