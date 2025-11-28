@@ -1,43 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyThon</title>
-    <link rel="stylesheet" href="/Web/static/style/style.css">
-
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="/static/style/style.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <h1>Gerenciador de tarefas</h1>
+    <div class="container">
+        <h1>Gerenciador de tarefas</h1>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">{{ total }}</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ pendentes }}</div>
+                <div class="stat-label">Pendentes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ concluidas }}</div>
+                <div class="stat-label">Concluídas</div>
+            </div>
         </div>
-
-        <div class="log">
-            <a href="/Web/static/pages/login.html">
-                <button>
-                    Login
-                </button>
-            </a>
-            <a href="/Web/static/pages/registre.html">
-                <button>
-                    Registre-se
-                </button </a>
-
-                >
+        
+        <div class="form-container">
+            <form method="POST" action="/adicionar">
+                <div class="input-group">
+                    <input type="text" name="titulo" placeholder="Digite uma nova tarefa..." required>
+                    <button type="submit" class="btn-add">Adicionar</button>
+                </div>
+            </form>
         </div>
-    </header>
-
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
+        
+        {% if tarefas %}
+            <ul class="tasks-list">
+                {% for tarefa in tarefas %}
+                <li class="task-item {% if tarefa.concluida %}concluida{% endif %}">
+                    <div class="task-content">
+                        <div class="task-title {% if tarefa.concluida %}concluida{% endif %}">
+                            {{ tarefa.titulo }}
+                        </div>
+                        <div class="task-date">
+                            Criada em: {{ tarefa.data }}
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        {% if not tarefa.concluida %}
+                        <form method="POST" action="/concluir/{{ tarefa.id }}" style="display:inline;">
+                            <button type="submit" class="btn-complete">✓ Concluir</button>
+                        </form>
+                        {% endif %}
+                        <form method="POST" action="/deletar/{{ tarefa.id }}" style="display:inline;">
+                            <button type="submit" class="btn-delete">🗑 Deletar</button>
+                        </form>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="empty-state">
+                <h3>Nenhuma tarefa ainda!</h3>
+                <p>Adicione sua primeira tarefa acima</p>
+            </div>
+        {% endif %}
+    </div>
 </body>
-<script src="/Web/static/js/script.js"></script>
-
 </html>
